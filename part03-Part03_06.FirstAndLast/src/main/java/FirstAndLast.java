@@ -11,6 +11,10 @@ public class FirstAndLast {
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("")) {
+                String firstName = list.get(0);
+                String lastName = list.get(list.size()-1);
+                System.out.println(firstName);
+                System.out.println(lastName);
                 break;
             }
 
