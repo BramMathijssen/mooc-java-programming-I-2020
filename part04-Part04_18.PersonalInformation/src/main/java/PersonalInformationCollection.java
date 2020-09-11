@@ -8,7 +8,30 @@ public class PersonalInformationCollection {
         // implement here your program that uses the PersonalInformation class
 
         ArrayList<PersonalInformation> infoCollection = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-
+        Scanner scanner = new Scanner(System.in);        
+        
+        while(true){
+            System.out.println("First name: ");
+            String firstName = scanner.nextLine();
+            
+            if(firstName.isEmpty()){
+                break;
+            }
+            
+            System.out.println("Last name: ");
+            String lastName = scanner.nextLine();
+            
+            System.out.println("Identification number: ");
+            String number = scanner.nextLine();
+            
+            infoCollection.add(new PersonalInformation(firstName, lastName, number));
+                               
+        }
+        
+        for(PersonalInformation item : infoCollection){
+            System.out.println(item.getFirstName()+ " " + item.getLastName());
+        }
+        
+        
     }
 }
